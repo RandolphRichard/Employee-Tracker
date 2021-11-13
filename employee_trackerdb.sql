@@ -1,9 +1,8 @@
--- This is my schema
+-- seed
 
-SELECT * FROM employee_trackerdb.department;
 SELECT * FROM employee_trackerdb.role;
 SELECT * FROM employee_trackerdb.employee;
-
+SELECT * FROM employee_trackerdb.department;
 
 
 DROP DATABASE IF EXISTS employee_trackerDB;
@@ -22,6 +21,7 @@ CREATE TABLE role (
 	title VARCHAR(30) not NULL,
 	salary decimal not NULL,
 	department_id INT not NULL
+    FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE SET NULL
 );
 
 CREATE TABLE employee (
@@ -30,6 +30,8 @@ CREATE TABLE employee (
   last_name VARCHAR(30) not NULL,
   role_id INT not NULL,
   manager_id INT
+   FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE SET NULL,
+    FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
   );
 
 
@@ -38,5 +40,5 @@ insert into employee (first_name,last_name, role_id)
 value ("Randy", "Rich", 1);
 
 SELECT * FROM department;
-SELECT * FROM role;
-SELECT * FROM employee;
+select * from role;
+select * from employee;

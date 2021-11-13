@@ -1,6 +1,6 @@
 const entryValidate = (answer) => {
     if (answer === "") {
-      return "Cannot be blank.";
+      return "You need to fill this section.";
     }
     return true;
   };
@@ -8,10 +8,10 @@ const entryValidate = (answer) => {
     if (isNaN(answer) === false) {
       return true;
     }
-    return "It needs to be a number.";
+    return "Cannot be other than a number.";
   };
   
-  const questionStart = [
+  const starterQ = [
     {
       type: "list",
       name: "starterQuestion",
@@ -33,7 +33,7 @@ const entryValidate = (answer) => {
     {
       type: "list",
       name: "add",
-      message: "What would you like to add?",
+      message: "What would you like to add Today?",
       choices: [
         "Add new department.",
         "Add new role.",
@@ -43,10 +43,10 @@ const entryValidate = (answer) => {
     },
   ];
   
-  const newDepartmentName = [
+  const newDepartName = [
     {
       type: "input",
-      name: "newDepartmentName",
+      name: "newDepartName",
       message: "What's the new department's name?",
       validate: entryValidate,
     },
@@ -55,19 +55,19 @@ const entryValidate = (answer) => {
     {
       type: "input",
       name: "newRoleTitle",
-      message: "What is the new role's title?",
+      message: "What's the new role's title?",
       validate: entryValidate,
     },
     {
       type: "input",
       name: "newRoleSalary",
-      message: "What is the new role's salary?",
+      message: "What's the new role's salary?",
       validate: numberValidate,
     },
     {
       type: "list",
       name: "newRoleDepartment_ID",
-      message: "What's the new role Department ID number?",
+      message: "What's the new role's Department ID number?",
       choices: roles,
     },
   ];
@@ -82,33 +82,33 @@ const entryValidate = (answer) => {
     {
       type: "input",
       name: "newLastName",
-      message: "What is the employee's last name?",
+      message: "What's the employee's last name?",
       validate: entryValidate,
     },
     {
       type: "list",
       name: "newEmployeeID",
-      message: "What is the new employee's Role?",
+      message: "What's the new employee's Role?",
       choices: roles,
     },
     {
       type: "input",
       name: "newEmployeeManager_ID",
       message:
-        "What is the new employee's manager ID number? (you need to fill this section)",
+        "What's the new employee's manager ID number? (you need to fill this section)",
     },
   ];
   
   const view = [
     {
       type: "list",
-      name: "view",
+      name: "viewSomething",
       message: "What would you like to view?",
       choices: [
         "View departments.",
         "View roles.",
         "View employees.",
-        "Done, show me the primary table.",
+        "Done, show me the complete table.",
       ],
     },
   ];
@@ -117,7 +117,7 @@ const entryValidate = (answer) => {
     {
       type: "list",
       name: "updateEmployee",
-      message: "Which employee's would you like to update?",
+      message: "Which employee's role would you like to update?",
       choices: "",
     },
     {
@@ -132,8 +132,8 @@ const entryValidate = (answer) => {
     add,
     view,
     update,
-    questionStart,
+    starterQ,
     newRoleInfo,
-    newDepartmentName,
+    newDepartName,
     newEmployeeInfo,
   };
