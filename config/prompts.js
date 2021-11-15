@@ -6,16 +6,15 @@ module.exports = {
 		message: "Make a selection:",
 		choices: [
 			/* VIEW*/
-			"View Employees", 
-			"View Employees by Manager", 
-			"View Employees by Department", 
 			"View Departments", 
 			"View Roles", 
-			"View Department Budget", 
+			"View Employees", 
+			"View Employees by Department", 
+			"View Employees by Manager", 
 			/* ADD */
-			"Add Employee", 
-			"Add Department", 
+			"Add Department",
 			"Add Role", 
+			"Add Employee", 
 			/* UPDATE */
 			"Update Employee Role", 
 			"Update Employee Manager", 
@@ -35,7 +34,7 @@ module.exports = {
 		{
 			type: "list",
 			name: "managerId",
-			message: "do you have a manger in mind?",
+			message: "do you have a manager in mind?",
 			choices: managerChoices,
 		},
 	],
@@ -85,7 +84,7 @@ module.exports = {
 		{
 			name: "manager",
 			type: "list",
-			message: "if you know the manger of the employee, Choose it:",
+			message: "if you know the manager name of the employee, Choose it:",
 			choices: managerArray,
 		},
 	],
