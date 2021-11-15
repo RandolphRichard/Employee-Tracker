@@ -51,7 +51,7 @@ Delete departments, roles, and employees.
 
 ## Installation
 
-- Use the [MySQL]
+- Use the [MySQL2]
 - Use [InquirerJs]
 - Use [console.table]
 
