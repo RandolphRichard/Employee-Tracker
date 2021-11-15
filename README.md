@@ -1,5 +1,12 @@
 # video
 
+Link : https://watch.screencastify.com/v/jnu1TqyTKQBng8ivohrQ
+# Github 
+
+Github repository: https://github.com/RandolphRichard/Employee-Tracker.git
+
+
+
 
 # Employee-Tracker
 An app that will be able to view and manage the departments, roles, and employees in the company , organize and plan the business.
